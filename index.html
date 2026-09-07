@@ -1,0 +1,1271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>LaundryCare - Professional Laundry Service</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     NAVBAR
+===================================================== -->
+
+<header class="header">
+
+    <div class="logo">
+        Laundry<span>Care</span>
+    </div>
+
+    <nav class="navbar">
+
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#how-it-works">How It Works</a>
+        <a href="#contact">Contact</a>
+
+    </nav>
+
+    <a href="#order" class="nav-button">
+        Book Now
+    </a>
+
+</header>
+
+
+
+<!-- =====================================================
+     HERO SECTION
+===================================================== -->
+
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <span class="hero-label">
+            PROFESSIONAL LAUNDRY SERVICE
+        </span>
+
+        <h1>
+            Fresh Clothes.<br>
+            <span>Fresh Life.</span>
+        </h1>
+
+        <p>
+            Reliable washing, ironing and dry cleaning services
+            for your everyday clothes. Quality care at affordable
+            prices.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="#order" class="primary-button">
+                Book Laundry Service
+            </a>
+
+            <a href="#pricing" class="secondary-button">
+                View Pricing
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="hero-info">
+
+        <div class="hero-info-card">
+
+            <div class="hero-icon">
+                ✓
+            </div>
+
+            <div>
+                <strong>Quality Cleaning</strong>
+                <span>Professional garment care</span>
+            </div>
+
+        </div>
+
+
+        <div class="hero-info-card">
+
+            <div class="hero-icon">
+                ₹
+            </div>
+
+            <div>
+                <strong>Affordable Pricing</strong>
+                <span>Transparent rates</span>
+            </div>
+
+        </div>
+
+
+        <div class="hero-info-card">
+
+            <div class="hero-icon">
+                ⚡
+            </div>
+
+            <div>
+                <strong>Quick Service</strong>
+                <span>On-time delivery</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     ORDER SECTION
+===================================================== -->
+
+<section class="order-section" id="order">
+
+    <div class="section-heading">
+
+        <span>BOOK A SERVICE</span>
+
+        <h2>
+            Place Your Laundry Order
+        </h2>
+
+        <p>
+            Fill in your details and calculate your estimated
+            laundry cost.
+        </p>
+
+    </div>
+
+
+    <div class="order-container">
+
+
+        <!-- ORDER FORM -->
+
+        <div class="order-form-box">
+
+            <h3>
+                Customer Details
+            </h3>
+
+
+            <form id="orderForm">
+
+
+                <div class="form-row">
+
+
+                    <div class="form-group">
+
+                        <label for="customerName">
+                            Customer Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="customerName"
+                            placeholder="Enter your name"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="phone">
+                            Phone Number
+                        </label>
+
+                        <input
+                            type="tel"
+                            id="phone"
+                            placeholder="10 digit mobile number"
+                            maxlength="10"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="form-row">
+
+
+                    <div class="form-group">
+
+                        <label for="service">
+                            Select Service
+                        </label>
+
+                        <select id="service" required>
+
+                            <option value="">
+                                Select a service
+                            </option>
+
+                            <option value="15">
+                                Wash & Fold - ₹15 / piece
+                            </option>
+
+                            <option value="25">
+                                Wash & Iron - ₹25 / piece
+                            </option>
+
+                            <option value="40">
+                                Premium Wash - ₹40 / piece
+                            </option>
+
+                            <option value="74">
+                                Dry Cleaning - ₹74 / piece
+                            </option>
+
+                            <option value="120">
+                                Blanket Cleaning - ₹120 / piece
+                            </option>
+
+                            <option value="20">
+                                Ironing - ₹20 / piece
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="quantity">
+                            Number of Clothes
+                        </label>
+
+                        <input
+                            type="number"
+                            id="quantity"
+                            min="1"
+                            max="100"
+                            placeholder="Example: 5"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="form-row">
+
+
+                    <div class="form-group">
+
+                        <label for="pickupDate">
+                            Pickup Date
+                        </label>
+
+                        <input
+                            type="date"
+                            id="pickupDate"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="deliveryDate">
+                            Preferred Delivery Date
+                        </label>
+
+                        <input
+                            type="date"
+                            id="deliveryDate"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- PRICE SUMMARY -->
+
+                <div class="price-summary">
+
+                    <div>
+
+                        <span>
+                            Price per piece
+                        </span>
+
+                        <strong id="pricePerPiece">
+                            ₹0
+                        </strong>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            Quantity
+                        </span>
+
+                        <strong id="quantityDisplay">
+                            0
+                        </strong>
+
+                    </div>
+
+
+                    <div class="total-price">
+
+                        <span>
+                            Estimated Total
+                        </span>
+
+                        <strong id="totalPrice">
+                            ₹0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="order-button">
+
+                    Place Laundry Order
+
+                </button>
+
+            </form>
+
+        </div>
+
+
+
+        <!-- ORDER SIDE INFORMATION -->
+
+        <div class="order-side">
+
+            <div class="side-card">
+
+                <div class="side-icon">
+                    🚚
+                </div>
+
+                <h3>
+                    Convenient Pickup & Delivery
+                </h3>
+
+                <p>
+                    Schedule your laundry pickup and get your
+                    clean clothes delivered at your preferred time.
+                </p>
+
+            </div>
+
+
+            <div class="side-card">
+
+                <div class="side-icon">
+                    🧺
+                </div>
+
+                <h3>
+                    Professional Care
+                </h3>
+
+                <p>
+                    Every garment is handled carefully according
+                    to its fabric and cleaning requirements.
+                </p>
+
+            </div>
+
+
+            <div class="side-card">
+
+                <div class="side-icon">
+                    💰
+                </div>
+
+                <h3>
+                    Transparent Pricing
+                </h3>
+
+                <p>
+                    No hidden charges. You can see the estimated
+                    price before placing your order.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     SERVICES SECTION
+===================================================== -->
+
+<section class="services-section" id="services">
+
+    <div class="section-heading">
+
+        <span>OUR SERVICES</span>
+
+        <h2>
+            Complete Laundry Solutions
+        </h2>
+
+        <p>
+            From everyday washing to premium garment care,
+            we handle your clothes with care.
+        </p>
+
+    </div>
+
+
+    <div class="services-grid">
+
+
+        <!-- SERVICE 1 -->
+
+        <div class="service-card">
+
+            <div class="service-card-top">
+
+                <div class="service-icon">
+                    🧺
+                </div>
+
+                <span class="service-price">
+                    ₹15 /pc
+                </span>
+
+            </div>
+
+            <h3>
+                Wash & Fold
+            </h3>
+
+            <p>
+                Everyday washing and neatly folded clothes
+                for regular household laundry.
+            </p>
+
+            <ul>
+                <li>Machine Washing</li>
+                <li>Fabric Care</li>
+                <li>Neat Folding</li>
+            </ul>
+
+        </div>
+
+
+
+        <!-- SERVICE 2 -->
+
+        <div class="service-card">
+
+            <div class="service-card-top">
+
+                <div class="service-icon">
+                    👕
+                </div>
+
+                <span class="service-price">
+                    ₹25 /pc
+                </span>
+
+            </div>
+
+            <h3>
+                Wash & Iron
+            </h3>
+
+            <p>
+                Complete washing and ironing service for
+                your daily wear clothes.
+            </p>
+
+            <ul>
+                <li>Deep Washing</li>
+                <li>Steam / Ironing</li>
+                <li>Fresh Finishing</li>
+            </ul>
+
+        </div>
+
+
+
+        <!-- SERVICE 3 -->
+
+        <div class="service-card">
+
+            <div class="service-card-top">
+
+                <div class="service-icon">
+                    ✨
+                </div>
+
+                <span class="service-price">
+                    ₹40 /pc
+                </span>
+
+            </div>
+
+            <h3>
+                Premium Wash
+            </h3>
+
+            <p>
+                Premium cleaning treatment for clothes that
+                need extra care and freshness.
+            </p>
+
+            <ul>
+                <li>Premium Detergent</li>
+                <li>Gentle Cleaning</li>
+                <li>Finishing</li>
+            </ul>
+
+        </div>
+
+
+
+        <!-- SERVICE 4 -->
+
+        <div class="service-card featured">
+
+            <div class="popular-badge">
+                POPULAR
+            </div>
+
+            <div class="service-card-top">
+
+                <div class="service-icon">
+                    👔
+                </div>
+
+                <span class="service-price">
+                    ₹74 /pc
+                </span>
+
+            </div>
+
+            <h3>
+                Dry Cleaning
+            </h3>
+
+            <p>
+                Professional dry cleaning for delicate and
+                special garments.
+            </p>
+
+            <ul>
+                <li>Spot Treatment</li>
+                <li>Professional Cleaning</li>
+                <li>Individual Packing</li>
+            </ul>
+
+        </div>
+
+
+
+        <!-- SERVICE 5 -->
+
+        <div class="service-card">
+
+            <div class="service-card-top">
+
+                <div class="service-icon">
+                    🛏️
+                </div>
+
+                <span class="service-price">
+                    ₹120 /pc
+                </span>
+
+            </div>
+
+            <h3>
+                Blanket Cleaning
+            </h3>
+
+            <p>
+                Deep cleaning for blankets and other large
+                household fabrics.
+            </p>
+
+            <ul>
+                <li>Deep Washing</li>
+                <li>Odour Removal</li>
+                <li>Fresh Finishing</li>
+            </ul>
+
+        </div>
+
+
+
+        <!-- SERVICE 6 -->
+
+        <div class="service-card">
+
+            <div class="service-card-top">
+
+                <div class="service-icon">
+                    ♨️
+                </div>
+
+                <span class="service-price">
+                    ₹20 /pc
+                </span>
+
+            </div>
+
+            <h3>
+                Ironing
+            </h3>
+
+            <p>
+                Professional ironing for clean and wrinkle-free
+                clothes.
+            </p>
+
+            <ul>
+                <li>Steam Ironing</li>
+                <li>Wrinkle Removal</li>
+                <li>Neat Finishing</li>
+            </ul>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     PRICING SECTION
+===================================================== -->
+
+<section class="pricing-section" id="pricing">
+
+    <div class="section-heading">
+
+        <span>SIMPLE PRICING</span>
+
+        <h2>
+            Our Popular Rates
+        </h2>
+
+        <p>
+            Affordable pricing with no hidden charges.
+        </p>
+
+    </div>
+
+
+    <div class="pricing-grid">
+
+
+        <div class="pricing-card">
+
+            <div class="pricing-icon">
+                👕
+            </div>
+
+            <h3>
+                Everyday Care
+            </h3>
+
+            <p class="pricing-description">
+                Perfect for your regular clothes.
+            </p>
+
+            <div class="pricing-amount">
+                ₹15
+                <small>/piece</small>
+            </div>
+
+            <ul>
+
+                <li>Wash & Fold</li>
+                <li>Fabric Friendly Cleaning</li>
+                <li>Neat Folding</li>
+                <li>Quality Detergent</li>
+
+            </ul>
+
+            <a href="#order">
+                Book Now
+            </a>
+
+        </div>
+
+
+
+        <div class="pricing-card pricing-highlight">
+
+            <span class="recommended">
+                MOST POPULAR
+            </span>
+
+            <div class="pricing-icon">
+                👔
+            </div>
+
+            <h3>
+                Premium Care
+            </h3>
+
+            <p class="pricing-description">
+                Complete care for your special clothes.
+            </p>
+
+            <div class="pricing-amount">
+                ₹74
+                <small>/piece</small>
+            </div>
+
+            <ul>
+
+                <li>Dry Cleaning</li>
+                <li>Spot Treatment</li>
+                <li>Professional Finishing</li>
+                <li>Individual Packing</li>
+
+            </ul>
+
+            <a href="#order">
+                Book Now
+            </a>
+
+        </div>
+
+
+
+        <div class="pricing-card">
+
+            <div class="pricing-icon">
+                🧥
+            </div>
+
+            <h3>
+                Special Garment Care
+            </h3>
+
+            <p class="pricing-description">
+                Extra care for premium garments.
+            </p>
+
+            <div class="pricing-amount">
+                ₹150
+                <small>/piece</small>
+            </div>
+
+            <ul>
+
+                <li>Saree Cleaning</li>
+                <li>Suit & Blazer</li>
+                <li>Premium Treatment</li>
+                <li>Careful Finishing</li>
+
+            </ul>
+
+            <a href="#order">
+                Book Now
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     WHY CHOOSE US
+===================================================== -->
+
+<section class="why-section">
+
+    <div class="section-heading">
+
+        <span>WHY LAUNDRYCARE?</span>
+
+        <h2>
+            Laundry Made Simple
+        </h2>
+
+        <p>
+            We take care of your clothes so you can take care
+            of what matters.
+        </p>
+
+    </div>
+
+
+    <div class="why-grid">
+
+
+        <div class="why-card">
+
+            <div class="why-icon">
+                🧼
+            </div>
+
+            <h3>
+                Quality Cleaning
+            </h3>
+
+            <p>
+                Professional cleaning processes designed to
+                keep your clothes fresh and clean.
+            </p>
+
+        </div>
+
+
+        <div class="why-card">
+
+            <div class="why-icon">
+                💰
+            </div>
+
+            <h3>
+                Affordable Rates
+            </h3>
+
+            <p>
+                Transparent and affordable prices suitable
+                for everyday laundry needs.
+            </p>
+
+        </div>
+
+
+        <div class="why-card">
+
+            <div class="why-icon">
+                🚚
+            </div>
+
+            <h3>
+                Pickup & Delivery
+            </h3>
+
+            <p>
+                Convenient pickup and delivery scheduling
+                makes laundry easier.
+            </p>
+
+        </div>
+
+
+        <div class="why-card">
+
+            <div class="why-icon">
+                🛡️
+            </div>
+
+            <h3>
+                Safe Garment Care
+            </h3>
+
+            <p>
+                We handle your clothes carefully based on
+                their fabric and cleaning requirements.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     HOW IT WORKS
+===================================================== -->
+
+<section class="how-section" id="how-it-works">
+
+    <div class="section-heading">
+
+        <span>HOW IT WORKS</span>
+
+        <h2>
+            Laundry in 4 Simple Steps
+        </h2>
+
+    </div>
+
+
+    <div class="steps-container">
+
+
+        <div class="step">
+
+            <div class="step-number">
+                01
+            </div>
+
+            <h3>
+                Place Order
+            </h3>
+
+            <p>
+                Select your laundry service and enter the
+                number of clothes.
+            </p>
+
+        </div>
+
+
+        <div class="step">
+
+            <div class="step-number">
+                02
+            </div>
+
+            <h3>
+                Pickup
+            </h3>
+
+            <p>
+                We collect your clothes at the selected
+                pickup time.
+            </p>
+
+        </div>
+
+
+        <div class="step">
+
+            <div class="step-number">
+                03
+            </div>
+
+            <h3>
+                Cleaning
+            </h3>
+
+            <p>
+                Your clothes are professionally washed,
+                cleaned or ironed.
+            </p>
+
+        </div>
+
+
+        <div class="step">
+
+            <div class="step-number">
+                04
+            </div>
+
+            <h3>
+                Delivery
+            </h3>
+
+            <p>
+                Fresh and clean clothes are delivered
+                back to you.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CONTACT SECTION
+===================================================== -->
+
+<section class="contact-section" id="contact">
+
+    <div class="contact-container">
+
+
+        <div class="contact-content">
+
+            <span>
+                GET IN TOUCH
+            </span>
+
+            <h2>
+                Need Laundry Service?
+            </h2>
+
+            <p>
+                Have questions about our services or pricing?
+                Contact us and our team will be happy to help.
+            </p>
+
+
+            <div class="contact-details">
+
+
+                <div class="contact-item">
+
+                    <div class="contact-icon">
+                        📞
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Call Us
+                        </strong>
+
+                        <p>
+                            +91 98765 43210
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="contact-item">
+
+                    <div class="contact-icon">
+                        ✉️
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Email
+                        </strong>
+
+                        <p>
+                            support@laundrycare.com
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="contact-item">
+
+                    <div class="contact-icon">
+                        📍
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Service Area
+                        </strong>
+
+                        <p>
+                            Chennai, Tamil Nadu
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="contact-item">
+
+                    <div class="contact-icon">
+                        🕐
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Working Hours
+                        </strong>
+
+                        <p>
+                            Mon - Sun | 8:00 AM - 8:00 PM
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="contact-box">
+
+            <h3>
+                Quick Enquiry
+            </h3>
+
+            <p>
+                Send us your details and we'll get back to you.
+            </p>
+
+
+            <form id="enquiryForm">
+
+    <input
+        type="text"
+        id="enquiryName"
+        placeholder="Your Name"
+        required
+    >
+
+    <input
+        type="tel"
+        id="enquiryPhone"
+        placeholder="Phone Number"
+        required
+    >
+
+    <textarea
+        id="enquiryMessage"
+        placeholder="How can we help you?"
+        required
+    ></textarea>
+
+    <button type="submit">
+        Send Enquiry
+    </button>
+
+</form>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+    <div class="footer-container">
+
+
+        <div class="footer-about">
+
+            <div class="logo footer-logo">
+                Laundry<span>Care</span>
+            </div>
+
+            <p>
+                Professional laundry and garment care service
+                designed for your convenience.
+            </p>
+
+        </div>
+
+
+        <div class="footer-links">
+
+            <h4>
+                Quick Links
+            </h4>
+
+            <a href="#home">Home</a>
+            <a href="#services">Services</a>
+            <a href="#pricing">Pricing</a>
+            <a href="#order">Book Service</a>
+
+        </div>
+
+
+        <div class="footer-links">
+
+            <h4>
+                Services
+            </h4>
+
+            <a href="#services">Wash & Fold</a>
+            <a href="#services">Dry Cleaning</a>
+            <a href="#services">Ironing</a>
+            <a href="#services">Special Garment Care</a>
+
+        </div>
+
+
+        <div class="footer-links">
+
+            <h4>
+                Contact
+            </h4>
+
+            <p>
+                +91 98765 43210
+            </p>
+
+            <p>
+                support@laundrycare.com
+            </p>
+
+            <p>
+                Chennai, Tamil Nadu
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <p>
+            © 2026 LaundryCare. All Rights Reserved.
+        </p>
+
+    </div>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
