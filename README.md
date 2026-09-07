@@ -10,7 +10,7 @@ The application allows customers to view available laundry services, calculate p
 
 **Website:** [Visit LaundryCare]( https://sakthi-2209.github.io/Laundry-Management-Web-Application/)
 
-**GitHub:** [View Source Code]([YOUR-GITHUB-REPOSITORY-LINK](https://github.com/Sakthi-2209/Laundry-Management-Web-Application))
+**GitHub:** [View Source Code](https://github.com/Sakthi-2209/Laundry-Management-Web-Application)
 
 
 ## 🚀 Project Overview
