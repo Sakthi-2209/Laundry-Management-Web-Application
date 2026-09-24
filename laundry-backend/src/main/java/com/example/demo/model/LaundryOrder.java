@@ -16,6 +16,8 @@ public class LaundryOrder {
 
     private String phone;
 
+    private String customerAddress;
+
     @ManyToOne
     @JoinColumn(name = "service_id")
     private LaundryService service;
@@ -43,6 +45,10 @@ public class LaundryOrder {
 
     public String getPhone() {
         return phone;
+    }
+
+    public String getCustomerAddress() {
+        return customerAddress;
     }
 
     public LaundryService getService() {
@@ -79,6 +85,10 @@ public class LaundryOrder {
 
     public void setPhone(String phone) {
         this.phone = phone;
+    }
+
+    public void setCustomerAddress(String customerAddress) {
+        this.customerAddress = customerAddress;
     }
 
     public void setService(LaundryService service) {

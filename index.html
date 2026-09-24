@@ -1,1271 +1,461 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
     <meta charset="UTF-8">
-
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LaundryCare - Professional Laundry Service</title>
-
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
-
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
-
-
 <body>
 
-
-<!-- =====================================================
-     NAVBAR
-===================================================== -->
-
-<header class="header">
-
-    <div class="logo">
-        Laundry<span>Care</span>
-    </div>
-
-    <nav class="navbar">
-
-        <a href="#home">Home</a>
-        <a href="#services">Services</a>
-        <a href="#pricing">Pricing</a>
-        <a href="#how-it-works">How It Works</a>
-        <a href="#contact">Contact</a>
-
-    </nav>
-
-    <a href="#order" class="nav-button">
-        Book Now
-    </a>
-
-</header>
-
-
-
-<!-- =====================================================
-     HERO SECTION
-===================================================== -->
-
-<section class="hero" id="home">
-
-    <div class="hero-content">
-
-        <span class="hero-label">
-            PROFESSIONAL LAUNDRY SERVICE
-        </span>
-
-        <h1>
-            Fresh Clothes.<br>
-            <span>Fresh Life.</span>
-        </h1>
-
-        <p>
-            Reliable washing, ironing and dry cleaning services
-            for your everyday clothes. Quality care at affordable
-            prices.
-        </p>
-
-        <div class="hero-buttons">
-
-            <a href="#order" class="primary-button">
-                Book Laundry Service
-            </a>
-
-            <a href="#pricing" class="secondary-button">
-                View Pricing
-            </a>
-
-        </div>
-
-    </div>
-
-
-    <div class="hero-info">
-
-        <div class="hero-info-card">
-
-            <div class="hero-icon">
-                ✓
-            </div>
-
-            <div>
-                <strong>Quality Cleaning</strong>
-                <span>Professional garment care</span>
-            </div>
-
-        </div>
-
-
-        <div class="hero-info-card">
-
-            <div class="hero-icon">
-                ₹
-            </div>
-
-            <div>
-                <strong>Affordable Pricing</strong>
-                <span>Transparent rates</span>
-            </div>
-
-        </div>
-
-
-        <div class="hero-info-card">
-
-            <div class="hero-icon">
-                ⚡
-            </div>
-
-            <div>
-                <strong>Quick Service</strong>
-                <span>On-time delivery</span>
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =====================================================
-     ORDER SECTION
-===================================================== -->
-
-<section class="order-section" id="order">
-
-    <div class="section-heading">
-
-        <span>BOOK A SERVICE</span>
-
-        <h2>
-            Place Your Laundry Order
-        </h2>
-
-        <p>
-            Fill in your details and calculate your estimated
-            laundry cost.
-        </p>
-
-    </div>
-
-
-    <div class="order-container">
-
-
-        <!-- ORDER FORM -->
-
-        <div class="order-form-box">
-
-            <h3>
-                Customer Details
-            </h3>
-
-
-            <form id="orderForm">
-
-
-                <div class="form-row">
-
-
-                    <div class="form-group">
-
-                        <label for="customerName">
-                            Customer Name
-                        </label>
-
-                        <input
-                            type="text"
-                            id="customerName"
-                            placeholder="Enter your name"
-                            required
-                        >
-
-                    </div>
-
-
-                    <div class="form-group">
-
-                        <label for="phone">
-                            Phone Number
-                        </label>
-
-                        <input
-                            type="tel"
-                            id="phone"
-                            placeholder="10 digit mobile number"
-                            maxlength="10"
-                            required
-                        >
-
-                    </div>
-
-                </div>
-
-
-
-                <div class="form-row">
-
-
-                    <div class="form-group">
-
-                        <label for="service">
-                            Select Service
-                        </label>
-
-                        <select id="service" required>
-
-                            <option value="">
-                                Select a service
-                            </option>
-
-                            <option value="15">
-                                Wash & Fold - ₹15 / piece
-                            </option>
-
-                            <option value="25">
-                                Wash & Iron - ₹25 / piece
-                            </option>
-
-                            <option value="40">
-                                Premium Wash - ₹40 / piece
-                            </option>
-
-                            <option value="74">
-                                Dry Cleaning - ₹74 / piece
-                            </option>
-
-                            <option value="120">
-                                Blanket Cleaning - ₹120 / piece
-                            </option>
-
-                            <option value="20">
-                                Ironing - ₹20 / piece
-                            </option>
-
-                        </select>
-
-                    </div>
-
-
-                    <div class="form-group">
-
-                        <label for="quantity">
-                            Number of Clothes
-                        </label>
-
-                        <input
-                            type="number"
-                            id="quantity"
-                            min="1"
-                            max="100"
-                            placeholder="Example: 5"
-                            required
-                        >
-
-                    </div>
-
-                </div>
-
-
-
-                <div class="form-row">
-
-
-                    <div class="form-group">
-
-                        <label for="pickupDate">
-                            Pickup Date
-                        </label>
-
-                        <input
-                            type="date"
-                            id="pickupDate"
-                            required
-                        >
-
-                    </div>
-
-
-                    <div class="form-group">
-
-                        <label for="deliveryDate">
-                            Preferred Delivery Date
-                        </label>
-
-                        <input
-                            type="date"
-                            id="deliveryDate"
-                            required
-                        >
-
-                    </div>
-
-                </div>
-
-
-
-                <!-- PRICE SUMMARY -->
-
-                <div class="price-summary">
-
-                    <div>
-
-                        <span>
-                            Price per piece
-                        </span>
-
-                        <strong id="pricePerPiece">
-                            ₹0
-                        </strong>
-
-                    </div>
-
-
-                    <div>
-
-                        <span>
-                            Quantity
-                        </span>
-
-                        <strong id="quantityDisplay">
-                            0
-                        </strong>
-
-                    </div>
-
-
-                    <div class="total-price">
-
-                        <span>
-                            Estimated Total
-                        </span>
-
-                        <strong id="totalPrice">
-                            ₹0
-                        </strong>
-
-                    </div>
-
-                </div>
-
-
-                <button
-                    type="submit"
-                    class="order-button">
-
-                    Place Laundry Order
-
-                </button>
-
-            </form>
-
-        </div>
-
-
-
-        <!-- ORDER SIDE INFORMATION -->
-
-        <div class="order-side">
-
-            <div class="side-card">
-
-                <div class="side-icon">
-                    🚚
-                </div>
-
-                <h3>
-                    Convenient Pickup & Delivery
-                </h3>
-
-                <p>
-                    Schedule your laundry pickup and get your
-                    clean clothes delivered at your preferred time.
-                </p>
-
-            </div>
-
-
-            <div class="side-card">
-
-                <div class="side-icon">
-                    🧺
-                </div>
-
-                <h3>
-                    Professional Care
-                </h3>
-
-                <p>
-                    Every garment is handled carefully according
-                    to its fabric and cleaning requirements.
-                </p>
-
-            </div>
-
-
-            <div class="side-card">
-
-                <div class="side-icon">
-                    💰
-                </div>
-
-                <h3>
-                    Transparent Pricing
-                </h3>
-
-                <p>
-                    No hidden charges. You can see the estimated
-                    price before placing your order.
-                </p>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =====================================================
-     SERVICES SECTION
-===================================================== -->
-
-<section class="services-section" id="services">
-
-    <div class="section-heading">
-
-        <span>OUR SERVICES</span>
-
-        <h2>
-            Complete Laundry Solutions
-        </h2>
-
-        <p>
-            From everyday washing to premium garment care,
-            we handle your clothes with care.
-        </p>
-
-    </div>
-
-
-    <div class="services-grid">
-
-
-        <!-- SERVICE 1 -->
-
-        <div class="service-card">
-
-            <div class="service-card-top">
-
-                <div class="service-icon">
-                    🧺
-                </div>
-
-                <span class="service-price">
-                    ₹15 /pc
-                </span>
-
-            </div>
-
-            <h3>
-                Wash & Fold
-            </h3>
-
-            <p>
-                Everyday washing and neatly folded clothes
-                for regular household laundry.
-            </p>
-
-            <ul>
-                <li>Machine Washing</li>
-                <li>Fabric Care</li>
-                <li>Neat Folding</li>
-            </ul>
-
-        </div>
-
-
-
-        <!-- SERVICE 2 -->
-
-        <div class="service-card">
-
-            <div class="service-card-top">
-
-                <div class="service-icon">
-                    👕
-                </div>
-
-                <span class="service-price">
-                    ₹25 /pc
-                </span>
-
-            </div>
-
-            <h3>
-                Wash & Iron
-            </h3>
-
-            <p>
-                Complete washing and ironing service for
-                your daily wear clothes.
-            </p>
-
-            <ul>
-                <li>Deep Washing</li>
-                <li>Steam / Ironing</li>
-                <li>Fresh Finishing</li>
-            </ul>
-
-        </div>
-
-
-
-        <!-- SERVICE 3 -->
-
-        <div class="service-card">
-
-            <div class="service-card-top">
-
-                <div class="service-icon">
-                    ✨
-                </div>
-
-                <span class="service-price">
-                    ₹40 /pc
-                </span>
-
-            </div>
-
-            <h3>
-                Premium Wash
-            </h3>
-
-            <p>
-                Premium cleaning treatment for clothes that
-                need extra care and freshness.
-            </p>
-
-            <ul>
-                <li>Premium Detergent</li>
-                <li>Gentle Cleaning</li>
-                <li>Finishing</li>
-            </ul>
-
-        </div>
-
-
-
-        <!-- SERVICE 4 -->
-
-        <div class="service-card featured">
-
-            <div class="popular-badge">
-                POPULAR
-            </div>
-
-            <div class="service-card-top">
-
-                <div class="service-icon">
-                    👔
-                </div>
-
-                <span class="service-price">
-                    ₹74 /pc
-                </span>
-
-            </div>
-
-            <h3>
-                Dry Cleaning
-            </h3>
-
-            <p>
-                Professional dry cleaning for delicate and
-                special garments.
-            </p>
-
-            <ul>
-                <li>Spot Treatment</li>
-                <li>Professional Cleaning</li>
-                <li>Individual Packing</li>
-            </ul>
-
-        </div>
-
-
-
-        <!-- SERVICE 5 -->
-
-        <div class="service-card">
-
-            <div class="service-card-top">
-
-                <div class="service-icon">
-                    🛏️
-                </div>
-
-                <span class="service-price">
-                    ₹120 /pc
-                </span>
-
-            </div>
-
-            <h3>
-                Blanket Cleaning
-            </h3>
-
-            <p>
-                Deep cleaning for blankets and other large
-                household fabrics.
-            </p>
-
-            <ul>
-                <li>Deep Washing</li>
-                <li>Odour Removal</li>
-                <li>Fresh Finishing</li>
-            </ul>
-
-        </div>
-
-
-
-        <!-- SERVICE 6 -->
-
-        <div class="service-card">
-
-            <div class="service-card-top">
-
-                <div class="service-icon">
-                    ♨️
-                </div>
-
-                <span class="service-price">
-                    ₹20 /pc
-                </span>
-
-            </div>
-
-            <h3>
-                Ironing
-            </h3>
-
-            <p>
-                Professional ironing for clean and wrinkle-free
-                clothes.
-            </p>
-
-            <ul>
-                <li>Steam Ironing</li>
-                <li>Wrinkle Removal</li>
-                <li>Neat Finishing</li>
-            </ul>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =====================================================
-     PRICING SECTION
-===================================================== -->
-
-<section class="pricing-section" id="pricing">
-
-    <div class="section-heading">
-
-        <span>SIMPLE PRICING</span>
-
-        <h2>
-            Our Popular Rates
-        </h2>
-
-        <p>
-            Affordable pricing with no hidden charges.
-        </p>
-
-    </div>
-
-
-    <div class="pricing-grid">
-
-
-        <div class="pricing-card">
-
-            <div class="pricing-icon">
-                👕
-            </div>
-
-            <h3>
-                Everyday Care
-            </h3>
-
-            <p class="pricing-description">
-                Perfect for your regular clothes.
-            </p>
-
-            <div class="pricing-amount">
-                ₹15
-                <small>/piece</small>
-            </div>
-
-            <ul>
-
-                <li>Wash & Fold</li>
-                <li>Fabric Friendly Cleaning</li>
-                <li>Neat Folding</li>
-                <li>Quality Detergent</li>
-
-            </ul>
-
-            <a href="#order">
-                Book Now
-            </a>
-
-        </div>
-
-
-
-        <div class="pricing-card pricing-highlight">
-
-            <span class="recommended">
-                MOST POPULAR
-            </span>
-
-            <div class="pricing-icon">
-                👔
-            </div>
-
-            <h3>
-                Premium Care
-            </h3>
-
-            <p class="pricing-description">
-                Complete care for your special clothes.
-            </p>
-
-            <div class="pricing-amount">
-                ₹74
-                <small>/piece</small>
-            </div>
-
-            <ul>
-
-                <li>Dry Cleaning</li>
-                <li>Spot Treatment</li>
-                <li>Professional Finishing</li>
-                <li>Individual Packing</li>
-
-            </ul>
-
-            <a href="#order">
-                Book Now
-            </a>
-
-        </div>
-
-
-
-        <div class="pricing-card">
-
-            <div class="pricing-icon">
-                🧥
-            </div>
-
-            <h3>
-                Special Garment Care
-            </h3>
-
-            <p class="pricing-description">
-                Extra care for premium garments.
-            </p>
-
-            <div class="pricing-amount">
-                ₹150
-                <small>/piece</small>
-            </div>
-
-            <ul>
-
-                <li>Saree Cleaning</li>
-                <li>Suit & Blazer</li>
-                <li>Premium Treatment</li>
-                <li>Careful Finishing</li>
-
-            </ul>
-
-            <a href="#order">
-                Book Now
-            </a>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =====================================================
-     WHY CHOOSE US
-===================================================== -->
-
-<section class="why-section">
-
-    <div class="section-heading">
-
-        <span>WHY LAUNDRYCARE?</span>
-
-        <h2>
-            Laundry Made Simple
-        </h2>
-
-        <p>
-            We take care of your clothes so you can take care
-            of what matters.
-        </p>
-
-    </div>
-
-
-    <div class="why-grid">
-
-
-        <div class="why-card">
-
-            <div class="why-icon">
-                🧼
-            </div>
-
-            <h3>
-                Quality Cleaning
-            </h3>
-
-            <p>
-                Professional cleaning processes designed to
-                keep your clothes fresh and clean.
-            </p>
-
-        </div>
-
-
-        <div class="why-card">
-
-            <div class="why-icon">
-                💰
-            </div>
-
-            <h3>
-                Affordable Rates
-            </h3>
-
-            <p>
-                Transparent and affordable prices suitable
-                for everyday laundry needs.
-            </p>
-
-        </div>
-
-
-        <div class="why-card">
-
-            <div class="why-icon">
-                🚚
-            </div>
-
-            <h3>
-                Pickup & Delivery
-            </h3>
-
-            <p>
-                Convenient pickup and delivery scheduling
-                makes laundry easier.
-            </p>
-
-        </div>
-
-
-        <div class="why-card">
-
-            <div class="why-icon">
-                🛡️
-            </div>
-
-            <h3>
-                Safe Garment Care
-            </h3>
-
-            <p>
-                We handle your clothes carefully based on
-                their fabric and cleaning requirements.
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =====================================================
-     HOW IT WORKS
-===================================================== -->
-
-<section class="how-section" id="how-it-works">
-
-    <div class="section-heading">
-
-        <span>HOW IT WORKS</span>
-
-        <h2>
-            Laundry in 4 Simple Steps
-        </h2>
-
-    </div>
-
-
-    <div class="steps-container">
-
-
-        <div class="step">
-
-            <div class="step-number">
-                01
-            </div>
-
-            <h3>
-                Place Order
-            </h3>
-
-            <p>
-                Select your laundry service and enter the
-                number of clothes.
-            </p>
-
-        </div>
-
-
-        <div class="step">
-
-            <div class="step-number">
-                02
-            </div>
-
-            <h3>
-                Pickup
-            </h3>
-
-            <p>
-                We collect your clothes at the selected
-                pickup time.
-            </p>
-
-        </div>
-
-
-        <div class="step">
-
-            <div class="step-number">
-                03
-            </div>
-
-            <h3>
-                Cleaning
-            </h3>
-
-            <p>
-                Your clothes are professionally washed,
-                cleaned or ironed.
-            </p>
-
-        </div>
-
-
-        <div class="step">
-
-            <div class="step-number">
-                04
-            </div>
-
-            <h3>
-                Delivery
-            </h3>
-
-            <p>
-                Fresh and clean clothes are delivered
-                back to you.
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =====================================================
-     CONTACT SECTION
-===================================================== -->
-
-<section class="contact-section" id="contact">
-
-    <div class="contact-container">
-
-
-        <div class="contact-content">
-
-            <span>
-                GET IN TOUCH
-            </span>
-
-            <h2>
-                Need Laundry Service?
-            </h2>
-
-            <p>
-                Have questions about our services or pricing?
-                Contact us and our team will be happy to help.
-            </p>
-
-
-            <div class="contact-details">
-
-
-                <div class="contact-item">
-
-                    <div class="contact-icon">
-                        📞
-                    </div>
-
-                    <div>
-
-                        <strong>
-                            Call Us
-                        </strong>
-
-                        <p>
-                            +91 98765 43210
-                        </p>
-
-                    </div>
-
-                </div>
-
-
-                <div class="contact-item">
-
-                    <div class="contact-icon">
-                        ✉️
-                    </div>
-
-                    <div>
-
-                        <strong>
-                            Email
-                        </strong>
-
-                        <p>
-                            support@laundrycare.com
-                        </p>
-
-                    </div>
-
-                </div>
-
-
-                <div class="contact-item">
-
-                    <div class="contact-icon">
-                        📍
-                    </div>
-
-                    <div>
-
-                        <strong>
-                            Service Area
-                        </strong>
-
-                        <p>
-                            Chennai, Tamil Nadu
-                        </p>
-
-                    </div>
-
-                </div>
-
-
-                <div class="contact-item">
-
-                    <div class="contact-icon">
-                        🕐
-                    </div>
-
-                    <div>
-
-                        <strong>
-                            Working Hours
-                        </strong>
-
-                        <p>
-                            Mon - Sun | 8:00 AM - 8:00 PM
-                        </p>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <div class="contact-box">
-
-            <h3>
-                Quick Enquiry
-            </h3>
-
-            <p>
-                Send us your details and we'll get back to you.
-            </p>
-
-
-            <form id="enquiryForm">
-
-    <input
-        type="text"
-        id="enquiryName"
-        placeholder="Your Name"
-        required
-    >
-
-    <input
-        type="tel"
-        id="enquiryPhone"
-        placeholder="Phone Number"
-        required
-    >
-
-    <textarea
-        id="enquiryMessage"
-        placeholder="How can we help you?"
-        required
-    ></textarea>
-
-    <button type="submit">
-        Send Enquiry
-    </button>
-
-</form>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =====================================================
-     FOOTER
-===================================================== -->
-
-<footer>
-
-    <div class="footer-container">
-
-
-        <div class="footer-about">
-
-            <div class="logo footer-logo">
+    <!-- Toast Notification Container -->
+    <div id="toastContainer" class="toast-container"></div>
+
+    <!-- NAVBAR -->
+    <header class="header" id="header">
+        <div class="nav-container">
+            <div class="logo">
+                <i data-lucide="droplet" class="logo-icon"></i>
                 Laundry<span>Care</span>
             </div>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i data-lucide="menu"></i>
+            </button>
 
-            <p>
-                Professional laundry and garment care service
-                designed for your convenience.
-            </p>
-
+            <nav class="navbar" id="navbar">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#how-it-works" class="nav-link">How It Works</a>
+                <a href="#contact" class="nav-link">Contact</a>
+                <a href="#order" class="nav-button">Place an Order</a>
+            </nav>
         </div>
+    </header>
 
+    <!-- HERO SECTION -->
+    <section class="hero" id="home">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="badge-dot"></span>
+                    Professional Laundry Service
+                </div>
+                <h1>Fresh Clothes.<br><span>More Time for You.</span></h1>
+                <p>Fast, reliable and affordable laundry services delivered with care. We handle your everyday laundry so you can focus on what matters.</p>
+                
+                <div class="hero-buttons">
+                    <a href="#order" class="btn btn-primary">Place an Order</a>
+                    <a href="#services" class="btn btn-outline">Explore Services</a>
+                </div>
 
-        <div class="footer-links">
-
-            <h4>
-                Quick Links
-            </h4>
-
-            <a href="#home">Home</a>
-            <a href="#services">Services</a>
-            <a href="#pricing">Pricing</a>
-            <a href="#order">Book Service</a>
-
+                <div class="trust-indicators">
+                    <div class="trust-item"><i data-lucide="check-circle-2"></i> Quality Cleaning</div>
+                    <div class="trust-item"><i data-lucide="check-circle-2"></i> On-Time Delivery</div>
+                    <div class="trust-item"><i data-lucide="check-circle-2"></i> Affordable Pricing</div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="visual-circle"></div>
+                <div class="floating-card card-1">
+                    <div class="icon-box"><i data-lucide="clock"></i></div>
+                    <div class="card-text">
+                        <strong>Same Day Pickup</strong>
+                        <span>Available on request</span>
+                    </div>
+                </div>
+                <div class="floating-card card-2">
+                    <div class="icon-box"><i data-lucide="layers"></i></div>
+                    <div class="card-text">
+                        <strong>6+ Services</strong>
+                        <span>For all fabrics</span>
+                    </div>
+                </div>
+                <div class="floating-card card-3">
+                    <div class="icon-box"><i data-lucide="smartphone"></i></div>
+                    <div class="card-text">
+                        <strong>Easy Ordering</strong>
+                        <span>Takes 2 minutes</span>
+                    </div>
+                </div>
+                <img src="https://images.unsplash.com/photo-1545173168-9f1947eebb7f?auto=format&fit=crop&q=80&w=600&h=600" alt="Fresh laundry basket" class="hero-img">
+            </div>
         </div>
+    </section>
 
+    <!-- SERVICES SECTION -->
+    <section class="services-section" id="services">
+        <div class="section-container">
+            <div class="section-heading text-center">
+                <h2>Our Laundry Services</h2>
+                <p>Professional care for every type of clothing.</p>
+            </div>
 
-        <div class="footer-links">
-
-            <h4>
-                Services
-            </h4>
-
-            <a href="#services">Wash & Fold</a>
-            <a href="#services">Dry Cleaning</a>
-            <a href="#services">Ironing</a>
-            <a href="#services">Special Garment Care</a>
-
+            <!-- This grid will be populated initially by fallback, then overwritten by API if successful -->
+            <div class="services-grid" id="servicesDisplayGrid">
+                <!-- Fallback content matches requested structure -->
+                <div class="service-card">
+                    <div class="service-icon"><i data-lucide="shirt"></i></div>
+                    <h3>Wash & Fold</h3>
+                    <p>Everyday washing and neatly folded clothes for regular household laundry.</p>
+                    <div class="service-price">₹40 <small>/ piece</small></div>
+                    <button class="btn btn-outline w-full choose-service-btn" data-service-id="1">Choose Service</button>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i data-lucide="wind"></i></div>
+                    <h3>Wash & Iron</h3>
+                    <p>Complete washing and ironing service for your daily wear clothes.</p>
+                    <div class="service-price">₹55 <small>/ piece</small></div>
+                    <button class="btn btn-outline w-full choose-service-btn" data-service-id="2">Choose Service</button>
+                </div>
+                <div class="service-card premium-card">
+                    <div class="service-icon"><i data-lucide="sparkles"></i></div>
+                    <h3>Dry Cleaning</h3>
+                    <p>Professional dry cleaning for delicate and special garments.</p>
+                    <div class="service-price">₹74 <small>/ piece</small></div>
+                    <button class="btn btn-primary w-full choose-service-btn" data-service-id="3">Choose Service</button>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i data-lucide="zap"></i></div>
+                    <h3>Steam Ironing</h3>
+                    <p>Professional ironing for clean and wrinkle-free clothes.</p>
+                    <div class="service-price">₹15 <small>/ piece</small></div>
+                    <button class="btn btn-outline w-full choose-service-btn" data-service-id="4">Choose Service</button>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i data-lucide="sun"></i></div>
+                    <h3>Saree Cleaning</h3>
+                    <p>Gentle care and rolling for your traditional wear.</p>
+                    <div class="service-price">₹120 <small>/ piece</small></div>
+                    <button class="btn btn-outline w-full choose-service-btn" data-service-id="5">Choose Service</button>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i data-lucide="shield-check"></i></div>
+                    <h3>Leather Jacket</h3>
+                    <p>Specialized cleaning treatment for premium leather items.</p>
+                    <div class="service-price">₹344 <small>/ piece</small></div>
+                    <button class="btn btn-outline w-full choose-service-btn" data-service-id="6">Choose Service</button>
+                </div>
+            </div>
         </div>
+    </section>
 
+    <!-- HOW IT WORKS -->
+    <section class="how-it-works" id="how-it-works">
+        <div class="section-container">
+            <div class="section-heading text-center">
+                <h2>How It Works</h2>
+                <p>Four simple steps to fresh, clean clothes.</p>
+            </div>
 
-        <div class="footer-links">
-
-            <h4>
-                Contact
-            </h4>
-
-            <p>
-                +91 98765 43210
-            </p>
-
-            <p>
-                support@laundrycare.com
-            </p>
-
-            <p>
-                Chennai, Tamil Nadu
-            </p>
-
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <div class="step-icon"><i data-lucide="mouse-pointer-click"></i></div>
+                    <h3>Place Your Order</h3>
+                    <p>Choose your service and enter your details.</p>
+                </div>
+                <div class="step-connector"></div>
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <div class="step-icon"><i data-lucide="truck"></i></div>
+                    <h3>We Pick Up</h3>
+                    <p>Our team collects your clothes from your door.</p>
+                </div>
+                <div class="step-connector"></div>
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <div class="step-icon"><i data-lucide="droplets"></i></div>
+                    <h3>We Clean</h3>
+                    <p>Your clothes are professionally cleaned.</p>
+                </div>
+                <div class="step-connector"></div>
+                <div class="step-card">
+                    <div class="step-number">4</div>
+                    <div class="step-icon"><i data-lucide="package-check"></i></div>
+                    <h3>Get Them Back</h3>
+                    <p>Receive your clean clothes at your preferred time.</p>
+                </div>
+            </div>
         </div>
+    </section>
 
+    <!-- WHY CHOOSE US -->
+    <section class="why-choose-us">
+        <div class="section-container">
+            <div class="why-grid">
+                <div class="why-card">
+                    <div class="icon-wrapper"><i data-lucide="medal"></i></div>
+                    <h3>Quality Cleaning</h3>
+                    <p>Professional cleaning process tailored for different fabric types and stains.</p>
+                </div>
+                <div class="why-card">
+                    <div class="icon-wrapper"><i data-lucide="wallet"></i></div>
+                    <h3>Affordable Pricing</h3>
+                    <p>Transparent per-piece pricing with absolutely no hidden fees.</p>
+                </div>
+                <div class="why-card">
+                    <div class="icon-wrapper"><i data-lucide="calendar-clock"></i></div>
+                    <h3>Convenient Pickup</h3>
+                    <p>Choose your preferred pickup date that fits your busy schedule.</p>
+                </div>
+                <div class="why-card">
+                    <div class="icon-wrapper"><i data-lucide="truck-fast"></i></div>
+                    <h3>Reliable Delivery</h3>
+                    <p>Get your clothes back fresh, folded, and exactly on time.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ORDER SECTION (MOST IMPORTANT) -->
+    <section class="order-section" id="order">
+        <div class="section-container">
+            
+            <div class="order-card">
+                <div class="order-header">
+                    <h2>Place Your Laundry Order</h2>
+                    <p>Tell us what you need and we'll take care of the rest.</p>
+                </div>
+
+                <div class="order-layout">
+                    <!-- Form Side -->
+                    <div class="order-form-container">
+                        <form id="orderForm" class="modern-form">
+                            
+                            <h4 class="form-section-title">Customer Details</h4>
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label for="customerName">Customer Name</label>
+                                    <div class="input-wrapper">
+                                        <i data-lucide="user" class="input-icon"></i>
+                                        <input type="text" id="customerName" placeholder="Enter your full name" required>
+                                    </div>
+                                    <span class="error-text" id="err-customerName">Name is required</span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="phone">Phone Number</label>
+                                    <div class="input-wrapper">
+                                        <i data-lucide="phone" class="input-icon"></i>
+                                        <input type="tel" id="phone" placeholder="10 digit mobile number" maxlength="10" required>
+                                    </div>
+                                    <span class="error-text" id="err-phone">Valid 10-digit phone number required</span>
+                                </div>
+
+                                <div class="form-group full-width">
+                                    <label for="customerAddress">Customer Address</label>
+                                    <div class="input-wrapper textarea-wrapper">
+                                        <i data-lucide="map-pin" class="input-icon"></i>
+                                        <textarea id="customerAddress" placeholder="Enter your complete pickup address" rows="3" required></textarea>
+                                    </div>
+                                    <span class="error-text" id="err-address">Address is required</span>
+                                </div>
+                            </div>
+
+                            <h4 class="form-section-title mt-6">Service Details</h4>
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label for="service">Select Service</label>
+                                    <div class="input-wrapper">
+                                        <i data-lucide="layers" class="input-icon"></i>
+                                        <select id="service" required>
+                                            <option value="">Choose a laundry service</option>
+                                            <!-- Dynamically populated -->
+                                        </select>
+                                    </div>
+                                    <span class="error-text" id="err-service">Please select a service</span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="quantity">Number of Clothes</label>
+                                    <div class="input-wrapper">
+                                        <i data-lucide="hash" class="input-icon"></i>
+                                        <input type="number" id="quantity" min="1" max="500" placeholder="Example: 5" required>
+                                    </div>
+                                    <span class="error-text" id="err-quantity">Quantity must be greater than 0</span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="pickupDate">Pickup Date</label>
+                                    <div class="input-wrapper">
+                                        <i data-lucide="calendar" class="input-icon"></i>
+                                        <input type="date" id="pickupDate" required>
+                                    </div>
+                                    <span class="error-text" id="err-pickup">Select a pickup date</span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="deliveryDate">Preferred Delivery Date</label>
+                                    <div class="input-wrapper">
+                                        <i data-lucide="calendar-check" class="input-icon"></i>
+                                        <input type="date" id="deliveryDate" required>
+                                    </div>
+                                    <span class="error-text" id="err-delivery">Delivery must be after pickup date</span>
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
+
+                    <!-- Summary Side -->
+                    <div class="order-summary-container">
+                        <div class="summary-card">
+                            <h3>Order Summary</h3>
+                            <div class="summary-row">
+                                <span class="summary-label">Price per piece</span>
+                                <span class="summary-value" id="pricePerPiece">₹0</span>
+                            </div>
+                            <div class="summary-row">
+                                <span class="summary-label">Quantity</span>
+                                <span class="summary-value" id="quantityDisplay">0</span>
+                            </div>
+                            <div class="summary-divider"></div>
+                            <div class="summary-row total-row">
+                                <span class="summary-label">Estimated Total</span>
+                                <span class="summary-total" id="totalPrice">₹0</span>
+                            </div>
+
+                            <button type="submit" form="orderForm" class="btn btn-primary btn-large w-full mt-6" id="submitOrderBtn">
+                                Place Laundry Order
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="contact-section" id="contact">
+        <div class="section-container">
+            <div class="contact-layout">
+                <div class="contact-info">
+                    <h2>Have a Question?</h2>
+                    <p>Need help with your laundry order? Send us a message and our team will get back to you.</p>
+                    
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <div class="method-icon"><i data-lucide="phone"></i></div>
+                            <div class="method-text">
+                                <strong>Phone</strong>
+                                <span>+91 98765 43210</span>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <div class="method-icon"><i data-lucide="mail"></i></div>
+                            <div class="method-text">
+                                <strong>Email</strong>
+                                <span>laundrycare@gmail.com</span>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <div class="method-icon"><i data-lucide="map-pin"></i></div>
+                            <div class="method-text">
+                                <strong>Location</strong>
+                                <span>Velachery, Chennai, Tamil Nadu</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form-wrapper">
+                    <form id="enquiryForm" class="modern-form">
+                        <div class="form-group">
+                            <label for="enquiryName">Name</label>
+                            <input type="text" id="enquiryName" placeholder="Your name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="enquiryPhone">Phone</label>
+                            <input type="tel" id="enquiryPhone" placeholder="Your phone number" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="enquiryMessage">Message</label>
+                            <textarea id="enquiryMessage" rows="4" placeholder="How can we help you?" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-full" id="submitEnquiryBtn">Send Enquiry</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="section-container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <i data-lucide="droplet"></i>
+                        Laundry<span>Care</span>
+                    </div>
+                    <p>Professional laundry care made simple. Fresh clothes delivered to your doorstep.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <a href="#home">Home</a>
+                    <a href="#services">Services</a>
+                    <a href="#how-it-works">How It Works</a>
+                    <a href="#contact">Contact</a>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Services</h4>
+                    <a href="#order">Wash & Fold</a>
+                    <a href="#order">Wash & Iron</a>
+                    <a href="#order">Dry Cleaning</a>
+                    <a href="#order">Steam Ironing</a>
+                </div>
+
+                <div class="footer-contact">
+                    <h4>Contact</h4>
+                    <p><i data-lucide="phone" class="small-icon"></i> +91 98765 43210</p>
+                    <p><i data-lucide="mail" class="small-icon"></i> laundrycare@gmail.com</p>
+                    <p><i data-lucide="map-pin" class="small-icon"></i> Velachery, Chennai, Tamil Nadu</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 LaundryCare. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Success Modal Template (Hidden by default) -->
+    <div class="modal-overlay" id="successModal">
+        <div class="modal-content">
+            <div class="modal-icon-success">
+                <i data-lucide="check-circle"></i>
+            </div>
+            <h2>Order Placed Successfully! 🎉</h2>
+            <p>Thank you, <strong id="modalCustomerName"></strong>. We have received your order.</p>
+            
+            <div class="modal-summary">
+                <div class="ms-row"><span>Service:</span> <strong id="modalService"></strong></div>
+                <div class="ms-row"><span>Quantity:</span> <strong id="modalQty"></strong></div>
+                <div class="ms-row"><span>Pickup:</span> <strong id="modalPickup"></strong></div>
+                <div class="ms-row"><span>Delivery:</span> <strong id="modalDelivery"></strong></div>
+                <div class="ms-row total"><span>Estimated Total:</span> <strong id="modalTotal"></strong></div>
+            </div>
+
+            <button class="btn btn-primary w-full" id="closeModalBtn">Close</button>
+        </div>
     </div>
 
-
-    <div class="footer-bottom">
-
-        <p>
-            © 2026 LaundryCare. All Rights Reserved.
-        </p>
-
-    </div>
-
-</footer>
-
-
-<script src="script.js"></script>
-
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    <script>
+        // Initialize lucide icons
+        lucide.createIcons();
+    </script>
 </body>
-
 </html>
